@@ -31,19 +31,64 @@ QString MainWindow::GenerateText(int columnIndex)
     default:
     case FOOT:
 
-        return QString("Right");
+        switch(rand() %2){
+        case 0:
+            return QString("Right");
+            break;
+
+        case 1:
+            return QString("Left");
+            break;
+
+        default:
+            return QString("NULL");
+            break;
+        }
 
         break;
 
     case COLOR:
 
-        return QString("Red");
+        switch(rand() %4){
+        case 0:
+             return QString("Red");
+            break;
+
+        case 1:
+            return QString("Yellow");
+            break;
+
+        case 2:
+            return QString("Blue");
+            break;
+
+        case 3:
+            return QString("Green");
+            break;
+
+        default:
+            return QString("NULL");
+            break;
+        }
+
 
         break;
 
     case DISTANCE:
 
-        return QString("Near");
+        switch(rand() %2){
+        case 0:
+            return QString("Near");
+            break;
+
+        case 1:
+            return QString("Far");
+            break;
+
+        default:
+            return QString("NULL");
+            break;
+        }
 
         break;
     }
